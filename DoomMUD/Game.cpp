@@ -19,15 +19,16 @@ int main(int argc, char *argv[])
   // Declare the supported options.
   po::options_description desc("Allowed options");
   desc.add_options()
-    ("help", "produce help message")
-    ("config", po::value<std::string>()->default_value(default_config_filename), "path to the config file")
+    ("help", "print this help and exit")
+    ("version", "print version information and exit")
+    ("config", po::value<std::string>()->default_value(default_config_filename), "set path to the config file")
     ("gm", "start the game with gm commands enabled")
     ("cheat", "start the game with cheats enabled")
     ("fullscreen", "forces the game to start in full screen mode")
-    ("worldsizex", po::value<int>(), "sets the x dimension of the world")
-    ("worldsizey", po::value<int>(), "sets the y dimension of the world")
+    ("worldsizex", po::value<int>(), "set the x dimension of the world")
+    ("worldsizey", po::value<int>(), "set the y dimension of the world")
     ("hijack", "take control of an existing instance of the game, if any, instead of complaining about already running")
-    ("load", po::value<std::string>(),"loads a previous game state")
+    ("load", po::value<std::string>(),"load a previous game state")
     ("verbosity", po::value<std::string>()->default_value("0"), "verbosity level")
     ;
   // Store supported options.
