@@ -19,8 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{EC52ADE0-A825-4B3A-89D9-0E11F79E8EEC}</ProjectGuid>
-    <RootNamespace>DoomMUD</RootNamespace>
+    <ProjectGuid>{7ABC4A23-CE18-4DD5-9921-0C1ABD2DC0EC}</ProjectGuid>
+    <RootNamespace>DoomMUDClient</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -71,7 +71,7 @@
   <PropertyGroup />
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <WarningLevel>Level4</WarningLevel>
+      <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>C:\Program Files\boost\boost_1_59_0</AdditionalIncludeDirectories>
@@ -120,11 +120,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Game.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="ConnectionManager.h" />
+    <ClCompile Include="ClientGame.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
-  <ImportGroup Label="ExtensionTargets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
 </Project>
