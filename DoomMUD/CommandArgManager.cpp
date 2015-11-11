@@ -41,6 +41,14 @@ void CommandArgManager::read_from_configuration_file()
 
 void CommandArgManager::parse_commands()
 {
+  using namespace std;
+  if (vm.count("help")) { cout << desc << "\n"; return 1; }
+
+  if (vm.count("worldsizex")) {
+  cout << "World size level was set to "
+  << vm["worldsizex"].as<int>() << ".\n";
+  }
+  else { cout << "World size level was not set.\n"; }
 }
 
 std::string CommandArgManager::get_val(std::string key)
