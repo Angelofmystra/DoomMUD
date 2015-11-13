@@ -31,10 +31,10 @@ void CommandArgManager::read_from_configuration_file()
   std::ifstream config_stream;
   config_stream.open(default_config_filename);
   if (!config_stream) {
-    std::cout << "[FAILED] Could not open config file " << vm["config"].as<std::string>();
+    std::cout << "[FAILED] Could not open config file " << vm["config"].as<std::string>() << "\n";
   }
   else {
-    std::cout << "[SUCCESS] Config file found" << default_config_filename;
+    std::cout << "[SUCCESS] Config file found" << default_config_filename << "\n";;
     store(parse_config_file(config_stream, desc), vm);
   }
 }
@@ -42,7 +42,7 @@ void CommandArgManager::read_from_configuration_file()
 void CommandArgManager::parse_commands()
 {
   using namespace std;
-  if (vm.count("help")) { cout << desc << "\n"; return 1; }
+  if (vm.count("help")) { cout << desc << "\n"; exit(0); }
 
   if (vm.count("worldsizex")) {
   cout << "World size level was set to "
